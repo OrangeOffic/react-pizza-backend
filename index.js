@@ -1,16 +1,21 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
+const cors = require('cors')
+
 const productRoutes = require('./routes/products')
 
 const app = express()
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 
 const password = 'Thab8zVuBfRgqN4F'
 
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(cors())
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 
 app.use('/api/products', productRoutes)
 

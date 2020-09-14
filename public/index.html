@@ -5,9 +5,64 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
 </head>
 <body>
- Как дела?
+<form action="/api/products/" method="post" class="form">
+    <label for="name">Название</label>
+    <input type="text" name="name" id="name">
+
+    <label for="imageUrl">Картинка</label>
+    <input type="text" name="imageUrl" id="imageUrl">
+
+    <div class="types">
+        <h3>Типы пиццы</h3>
+
+        <div>
+            <input type="checkbox" id="1t" name="type1">
+            <label for="1t">Тонкая</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="2t" name="type2">
+            <label for="2t">Традиционная</label>
+        </div>
+    </div>
+
+    <div class="sizes">
+        <h3>Размеры</h3>
+
+        <div>
+            <input type="checkbox" id="1s" name="size1">
+            <label for="1s">26 см</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="2s" name="size2">
+            <label for="2s">30 см</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="3s" name="size3">
+            <label for="3s">40 см</label>
+        </div>
+
+    </div>
+
+
+    <label for="price">Цена</label>
+    <input type="number" name="price" id="price">
+
+    <label for="category">Категории</label>
+    <input type="number" name="category" id="category">
+
+    <label for="rating">Рейтинг</label>
+    <input type="number" name="rating" id="rating">
+
+    <button>Добавить</button>
+</form>
 </body>
 </html>
